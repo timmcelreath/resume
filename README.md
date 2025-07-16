@@ -26,7 +26,7 @@ Proven ability to manage both technical architecture and engineering teams, with
 
 ### **Career Sabbatical**
 
-*11/2024 - Present*
+*11/2024-Present*
 
 Taking first sabbatical in 35-year career to focus on personal development and strategic career planning while exploring opportunities in engineering leadership.
 
@@ -34,7 +34,7 @@ Taking first sabbatical in 35-year career to focus on personal development and s
 
 ### **Axios - Engineering Lead**
 
-*2024 | Remote*
+*06/2024-11/2024 | Remote*
 
 Led engineering initiatives for digital media platform serving millions of readers globally.
 
@@ -47,7 +47,7 @@ Led engineering initiatives for digital media platform serving millions of reade
 
 ### **VTS - Director of Engineering**
 
-*2020-2024 | New York, NY (Remote/Hybrid)*
+*11/2020-06/2024 | New York, NY (Remote/Hybrid)*
 
 Led engineering transformation for leading PropTech platform serving 12B+ sq ft of commercial real estate and 45,000+ users globally.
 
@@ -65,7 +65,7 @@ Led engineering transformation for leading PropTech platform serving 12B+ sq ft 
 
 ### **Discovery - Engineering Manager → Director of Engineering**
 
-*2015-2020 | New York, NY*
+*03/2015-11/2020 | New York, NY*
 
 Managed platform engineering for Discovery+ streaming service, supporting 25M+ subscribers across multiple brands (HGTV, Food Network, The Cooking Channel).
 
@@ -85,7 +85,7 @@ Managed platform engineering for Discovery+ streaming service, supporting 25M+ s
 
 ### **Bank of America/Merrill Lynch - Senior Software Engineer → Engineering Manager**
 
-*2004-2012 | New York, NY*
+*11/2004-05/2012 | New York, NY*
 
 Progressed from senior engineer to engineering manager, leading critical trading platform modernization for Global Markets division.
 
