@@ -58,7 +58,7 @@ Led engineering transformation for leading PropTech platform serving 12B+ sq ft 
 • **Decreased time-to-market by 60%** for new features by establishing product-engineering collaboration frameworks and removing process bottlenecks\
 • **Implemented comprehensive observability** using DataDog, Prometheus, and custom dashboards, reducing MTTR from hours to minutes\
 • **Built and mentored diverse leadership team**, promoting 5 senior engineers to management roles and achieving 90%+ team retention\
-• **Led technical interviews and hiring**, growing team while maintaining high engineering standards and diverse candidate pipeline\
+• **Led technical interviews and hiring**, growing team while maintaining high engineering standards and diverse candidate pipeline
 
 *Tech Stack: AWS, Kubernetes, React, Node.js, PostgreSQL, Redis, CircleCI, DataDog, Ruby on Rails*
 
@@ -78,7 +78,7 @@ Managed platform engineering for Discovery+ streaming service, supporting 25M+ s
 • **Established 24/7 global support model** across 3 time zones, achieving 99.95% availability for live streaming events\
 • **Led API design and development** for content management, user authentication, and recommendation systems serving millions of requests\
 • **Championed engineering culture initiatives** including hackathons, tech talks, and mentorship programs, improving engagement scores by 30%\
-• **Managed on-call rotations and incident response**, establishing runbooks and post-mortem processes adopted company-wide\
+• **Managed on-call rotations and incident response**, establishing runbooks and post-mortem processes adopted company-wide
 
 *Tech Stack: AWS, Docker, Kubernetes, Java, Python, Kafka, ElasticSearch, Prometheus, MySQL, Redis*
 
@@ -98,7 +98,7 @@ Progressed from senior engineer to engineering manager, leading critical trading
 • **Collaborated with trading, risk, and compliance teams** to deliver regulatory reporting features ahead of deadline, avoiding potential fines\
 • **Built real-time monitoring and alerting systems** using Splunk and custom dashboards for trading floor operations\
 • **Established engineering standards and best practices** adopted across 5 teams in Global Markets technology\
-• **Mentored junior developers** in software design patterns, code review practices, and financial domain knowledge\
+• **Mentored junior developers** in software design patterns, code review practices, and financial domain knowledge
 
 *Tech Stack: Java, C++, Oracle, Redis, Kafka, Jenkins, Splunk, Unix/Linux*
 
@@ -110,7 +110,7 @@ Progressed from senior engineer to engineering manager, leading critical trading
 **Cloud & Infrastructure:** AWS (EC2, EKS, RDS, Lambda), Kubernetes, Docker, Terraform, CI/CD, Microservices\
 **Data & Analytics:** PostgreSQL, MySQL, Redis, Kafka, ElasticSearch, Prometheus, Splunk\
 **Tools & Platforms:** Git, Jenkins, CircleCI, DataDog, Jira, Confluence, Grafana\
-**Methodologies:** Agile/Scrum, DevOps, TDD, Code Review, System Design, API Design\
+**Methodologies:** Agile/Scrum, DevOps, TDD, Code Review, System Design, API Design
 
 ---
 
@@ -129,4 +129,4 @@ Rhode Island School of Design | 1991
 • **Performance Optimization:** Improved system performance by 250% through architectural improvements and optimization\
 • **Cost Optimization:** Reduced infrastructure costs by 40% through strategic cloud migrations and efficient resource utilization\
 • **DevOps Transformation:** Reduced deployment cycles by 75% through CI/CD implementation and automation\
-• **Leadership Development:** Mentored 20+ engineers into senior and leadership roles with 90%+ retention rates\
+• **Leadership Development:** Mentored 20+ engineers into senior and leadership roles with 90%+ retention rates
