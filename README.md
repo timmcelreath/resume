@@ -2,7 +2,7 @@
 
 **Senior Engineering Manager | Platform Engineering & Team Scaling | Full-Stack Leadership**
 
-Email: tim.mcelreath@email.com | LinkedIn: linkedin.com/in/timmcelreath | Phone: [Your Phone]
+Email: tim.mcelreath@email.com | LinkedIn: linkedin.com/in/timmcelreath
 
 ---
 
