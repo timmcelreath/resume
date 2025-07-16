@@ -8,9 +8,9 @@ Email: tim.mcelreath@email.com | LinkedIn: linkedin.com/in/timmcelreath
 
 ## EXECUTIVE SUMMARY
 
-Senior Engineering Manager with 20+ years of hands-on engineering and leadership experience, from building high-frequency trading systems at Bank of America to scaling streaming platforms at Discovery and leading PropTech innovation at VTS.
+Senior Engineering Manager with 20+ years of hands-on engineering and leadership experience, from building account processing and KYC/AML compliance systems at Bank of America to scaling streaming platforms at Discovery and leading PropTech innovation at VTS.
 
-Proven ability to manage both technical architecture and engineering teams, with deep expertise in cloud platforms, microservices, and modern development practices. Track record of scaling teams from 10 to 30+ engineers while maintaining technical excellence and 99.9% platform reliability.
+Proven ability to manage both technical architecture and engineering teams, with deep expertise in cloud platforms, microservices, and modern development practices. Track record of scaling teams from 10 to 30+ engineers while maintaining technical excellence and platform reliability.
 
 **Seeking Senior Engineering Manager opportunities where I can combine hands-on technical leadership with team development.**
 
@@ -39,9 +39,9 @@ Taking first sabbatical in 35-year career to focus on personal development and s
 Led engineering initiatives for digital media platform serving millions of readers globally.
 
 • **Assessed technical strategy** for content delivery platform supporting high-traffic news cycles and real-time breaking news distribution\
-• **Evaluated architecture** for GraphQL APIs, React frontends, and AWS infrastructure supporting concurrent user loads
+• **Reset developemt processes** for proititizing and remediating technical debt across shared code repositories
 
-*Tech Stack: AWS, React, Node.js, GraphQL*
+*Tech Stack: AWS, React, Node.js, Golang, PostgreSQL*
 
 ---
 
@@ -60,11 +60,11 @@ Led engineering transformation for leading PropTech platform serving 12B+ sq ft 
 • **Built and mentored diverse leadership team**, promoting 5 senior engineers to management roles and achieving 90%+ team retention\
 • **Led technical interviews and hiring**, growing team while maintaining high engineering standards and diverse candidate pipeline
 
-*Tech Stack: AWS, Kubernetes, React, Node.js, PostgreSQL, Redis, CircleCI, DataDog, Ruby on Rails*
+*Tech Stack: AWS, Kubernetes, React, Node.js, Ruby on Rails, PostgreSQL, Redis, CircleCI, DataDog, Ruby on Rails*
 
 ---
 
-### **Discovery - Engineering Manager / Senior Engineering Manager**
+### **Discovery - Engineering Manager → Director of Engineering**
 
 *2015-2020 | New York, NY*
 
@@ -84,23 +84,22 @@ Managed platform engineering for Discovery+ streaming service, supporting 25M+ s
 
 ---
 
-### **Bank of America - Senior Software Engineer → Engineering Manager**
+### **Bank of America/Merrill Lynch - Senior Software Engineer → Engineering Manager**
 
 *2004-2012 | New York, NY*
 
 Progressed from senior engineer to engineering manager, leading critical trading platform modernization for Global Markets division.
 
-• **Transitioned from IC to managing 15-person team** responsible for real-time trading systems processing $500M+ daily volume\
-• **Led migration from monolithic to microservices architecture**, reducing system latency by 65% and improving scalability 10x\
-• **Developed high-frequency trading algorithms** in C++ and Java, optimizing for sub-millisecond execution times\
-• **Implemented automated testing and deployment pipelines**, decreasing production incidents by 80% and deployment time from hours to minutes\
+• **Transitioned from IC to managing 20-person team** responsible for KYC complaince and acount opening supporting $500M+ daily trading volume\
+• **Implemented automated testing and deployment pipelines**, decreasing production incidents by 80% and deployment time from weeks to days\
+• **Migrated and verified data** across BofA and ML fixed income account to support the transition to a single borker-dealer\
 • **Designed fault-tolerant messaging systems** using message queues and event-driven architecture for financial data processing\
 • **Collaborated with trading, risk, and compliance teams** to deliver regulatory reporting features ahead of deadline, avoiding potential fines\
 • **Built real-time monitoring and alerting systems** using Splunk and custom dashboards for trading floor operations\
-• **Established engineering standards and best practices** adopted across 5 teams in Global Markets technology\
+• **Established engineering standards and best practices** adopted across Global Markets technology\
 • **Mentored junior developers** in software design patterns, code review practices, and financial domain knowledge
 
-*Tech Stack: Java, C++, Oracle, Redis, Kafka, Jenkins, Splunk, Unix/Linux*
+*Tech Stack: Java, C++, Oracle, Redis, Jenkins, Splunk, Unix/Linux*
 
 ---
 
