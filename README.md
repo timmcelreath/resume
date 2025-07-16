@@ -53,8 +53,7 @@ Led engineering transformation for leading PropTech platform serving 12B+ sq ft 
 
 • **Scaled engineering organization from 25 to 50+ engineers** across 6 teams while improving delivery velocity by 3x through Agile transformation\
 • **Reduced deployment cycle from weekly to multiple daily releases** by implementing CI/CD pipelines, automated testing, and DevOps best practices\
-• **Improved platform reliability from 97% to 99.9% uptime** through microservices migration, comprehensive monitoring, and incident response protocols\
-• **Architected microservices migration** from monolithic Ruby on Rails application to distributed Node.js services, improving performance by 200%\
+• **Improved platform reliability from 97% to 99.9% uptime** through improved testing, comprehensive monitoring, and incident response protocols\
 • **Decreased time-to-market by 60%** for new features by establishing product-engineering collaboration frameworks and removing process bottlenecks\
 • **Implemented comprehensive observability** using DataDog, Prometheus, and custom dashboards, reducing MTTR from hours to minutes\
 • **Built and mentored diverse leadership team**, promoting 5 senior engineers to management roles and achieving 90%+ team retention\
@@ -123,7 +122,7 @@ Rhode Island School of Design | 1991
 ## KEY ACHIEVEMENTS
 
 • **Technical Leadership:** Designed and implemented microservices architectures serving millions of users\
-• **Team Growth:** Scaled engineering organizations from 10 to 50+ engineers while maintaining technical excellence\
+• **Team Growth:** Scaled engineering organizations from 10 to 30+ engineers while maintaining technical excellence\
 • **Platform Reliability:** Achieved 99.9% uptime for mission-critical platforms through robust architecture and monitoring\
 • **Performance Optimization:** Improved system performance by 250% through architectural improvements and optimization\
 • **Cost Optimization:** Reduced infrastructure costs by 40% through strategic cloud migrations and efficient resource utilization\
