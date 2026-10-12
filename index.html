@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tim McElreath</title>
+<meta name="description" content="Tim McElreath is an engineering leader in Brooklyn. Works: Criteria, Kinopolis, Colossal Cave and Old Lady Mahjong.">
+<meta property="og:title" content="Tim McElreath">
+<meta property="og:description" content="Engineering leader in Brooklyn. Four restorations for the web: Criteria, Kinopolis, Colossal Cave and Old Lady Mahjong.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23fbfbf9'/%3E%3Crect x='1' y='1' width='30' height='30' fill='none' stroke='%231f2328' stroke-width='2'/%3E%3Ctext x='16' y='22' font-family='Arial' font-weight='800' font-size='14' text-anchor='middle' fill='%238a3b2e'%3ETM%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..100,400..800&family=Courier+Prime:wght@400;700&family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&family=Libre+Franklin:wght@400;600;800&family=Source+Serif+4:opsz,wght@8..60,400&family=VT323&display=swap">
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<div class="page">
+  <header class="top">
+    <a class="name" href="/">Tim McElreath</a>
+    <nav aria-label="Primary">
+      <a href="#works" aria-current="page">Works</a>
+      <a href="/resume">Résumé</a>
+      <a href="https://www.linkedin.com/in/timmcelreath/">LinkedIn</a>
+    </nav>
+  </header>
+
+  <section class="intro">
+    <h1>I lead engineering teams. In my own time I restore old things for the web.</h1>
+    <p class="tombstone">
+      <strong>Tim McElreath</strong><br>
+      American, b. 1969<br>
+      Lives and works in Brooklyn<br>
+      VP of Engineering, Member Growth, Spring Health<br>
+      BFA, Rhode Island School of Design, 1991
+    </p>
+  </section>
+
+  <section class="room" id="works" aria-labelledby="room-title">
+    <header class="wall-text">
+      <span class="room-no">Room 1</span>
+      <h2 id="room-title">Restorations</h2>
+      <p class="room-dates">Four works, January–October 2026</p>
+      <p>Each work in this room takes something old and makes it usable again: the first films, a repertory film catalog, a parlour game and the first text adventure. Three are shown as they look today. The fourth still works: type into the terminal.</p>
+    </header>
+
+    <div class="bays">
+      <article class="bay">
+        <figure class="plate plate-shot">
+          <a href="https://search-criteria.com"><img src="/images/criteria.jpg" width="1600" height="1000" loading="lazy" alt="The Criteria homepage: a Kiyoshi Kurosawa programme leads Tonight, under navigation for Programmes, Voices, The Daily and Library."></a>
+          <figcaption>Homepage, October 2026</figcaption>
+        </figure>
+        <div class="label">
+          <span class="acc">TM.2026.01</span>
+          <h3>Criteria</h3>
+          <p class="medium">Python (FastAPI), Next.js, React Native, MCP<br>Begun January 2026</p>
+          <p>A companion to the Criterion Channel. It adds full credits to every film, follows a person through their filmography, and keeps track of how much of each programme is still streaming.</p>
+          <p class="credit">Collection of the artist</p>
+          <a class="visit" href="https://search-criteria.com">search-criteria.com →</a>
+        </div>
+      </article>
+
+      <article class="bay bay-flip">
+        <figure class="plate plate-shot">
+          <a href="https://www.kino-polis.com"><img src="/images/kinopolis.jpg" width="1600" height="1000" loading="lazy" alt="The Kinopolis homepage: Vsevolod Pudovkin's Mother (1926) as film of the day, released 100 years ago today."></a>
+          <figcaption>Homepage, October 2026</figcaption>
+        </figure>
+        <div class="label">
+          <span class="acc">TM.2026.02</span>
+          <h3>Kinopolis</h3>
+          <p class="medium">Next.js, Supabase, TMDB, MCP<br>Begun February 2026</p>
+          <p>A curated guide to the essential films of early cinema. Each film comes with the best public version available and the context needed to see how cinema developed across countries, movements and artists.</p>
+          <p class="credit">Collection of the artist</p>
+          <a class="visit" href="https://www.kino-polis.com">kino-polis.com →</a>
+        </div>
+      </article>
+
+      <article class="bay">
+        <div class="plate plate-cave">
+          <div class="crt">
+            <div class="screen" id="cave-screen" aria-live="polite">
+              <p>YOU ARE STANDING AT THE END OF A ROAD BEFORE A SMALL BRICK BUILDING. AROUND YOU IS A FOREST. A SMALL STREAM FLOWS OUT OF THE BUILDING AND DOWN A GULLY.</p>
+            </div>
+            <form class="prompt" id="cave-form" autocomplete="off">
+              <label for="cave-input">&gt;</label>
+              <input id="cave-input" name="cmd" type="text" spellcheck="false" autocapitalize="characters" placeholder="TRY: ENTER BUILDING" aria-label="Command">
+            </form>
+          </div>
+        </div>
+        <div class="label">
+          <span class="acc">TM.2026.03</span>
+          <h3>Colossal Cave</h3>
+          <p class="medium">JavaScript and three.js, after Fortran IV (1977)<br>Begun June 2026</p>
+          <p>A faithful port of Will Crowther's original 1977 text adventure, from before Don Woods expanded it. The engine follows the Fortran source line by line, and a second version draws the cave around you in first person. The terminal on this plate knows the first few rooms, word for word.</p>
+          <p class="credit">Collection of the artist</p>
+          <a class="visit" href="https://colossalcave.io">colossalcave.io →</a>
+        </div>
+      </article>
+
+      <article class="bay bay-flip">
+        <figure class="plate plate-shot">
+          <a href="https://www.oldladymahjong.com"><img src="/images/mahjong.jpg" width="1600" height="1000" loading="lazy" alt="The Old Lady Mahjong homepage: “Warm on the porch. Lethal at the table.” beside an illustration of Auntie holding a tile."></a>
+          <figcaption>Homepage, October 2026</figcaption>
+        </figure>
+        <div class="label">
+          <span class="acc">TM.2026.04</span>
+          <h3>Old Lady Mahjong</h3>
+          <p class="medium">React, Express, Supabase<br>Begun September 2026</p>
+          <p>Online mahjong in four styles: Hong Kong Old Style, Japanese Riichi, American and Sichuan. The server enforces every rule. You can play AI opponents or invite friends, and Auntie's lessons teach newcomers. Her opening line: &ldquo;Sit down. I already shuffled.&rdquo;</p>
+          <p class="credit">Collection of the artist</p>
+          <a class="visit" href="https://www.oldladymahjong.com">oldladymahjong.com →</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="about">
+    <h2>Twenty years of building teams and platforms</h2>
+    <div>
+      <p>I run engineering for Member Growth at Spring Health. Before that I led engineering at Axios, VTS, Discovery and Bank of America/Merrill Lynch, scaling teams to 50+ engineers on streaming, real estate and financial platforms.</p>
+      <p>Off the clock I play Irish traditional music on mandolin and tenor banjo, watch a lot of old films, and walk George.</p>
+      <div class="cta"><a href="/resume">Read the résumé →</a><a href="https://www.linkedin.com/in/timmcelreath/">LinkedIn →</a></div>
+    </div>
+  </section>
+
+  <footer>
+    <span>© 2026 Tim McElreath</span>
+    <span>Brooklyn, New York</span>
+  </footer>
+</div>
+<script>
+(() => {
+  // Colossal Cave: the first rooms of Crowther's 1977 cave, in his words
+  const ROOMS = {
+    road: { text: 'YOU ARE STANDING AT THE END OF A ROAD BEFORE A SMALL BRICK BUILDING. AROUND YOU IS A FOREST. A SMALL STREAM FLOWS OUT OF THE BUILDING AND DOWN A GULLY.',
+            go: { E: 'building', IN: 'building', ENTER: 'building', BUILDING: 'building', HOUSE: 'building', W: 'hill', UP: 'hill', ROAD: 'hill', S: 'valley', DOWN: 'valley', VALLEY: 'valley', STREAM: 'valley', DOWNSTREAM: 'valley', N: 'forest', FOREST: 'forest' } },
+    hill: { text: 'YOU HAVE WALKED UP A HILL, STILL IN THE FOREST. THE ROAD NOW SLOPES BACK DOWN THE OTHER SIDE OF THE HILL. THERE IS A BUILDING IN THE DISTANCE.',
+            go: { E: 'road', BUILDING: 'road', DOWN: 'road', ROAD: 'road', BACK: 'road', N: 'forest', S: 'forest', FOREST: 'forest' } },
+    building: { text: 'YOU ARE INSIDE A BUILDING, A WELL HOUSE FOR A LARGE SPRING.',
+            go: { OUT: 'road', OUTSIDE: 'road', EXIT: 'road', LEAVE: 'road', W: 'road', BACK: 'road' } },
+    valley: { text: 'YOU ARE IN A VALLEY IN THE FOREST BESIDE A STREAM TUMBLING ALONG A ROCKY BED.',
+            go: { N: 'road', UP: 'road', BUILDING: 'road', UPSTREAM: 'road', BACK: 'road', E: 'forest', W: 'forest', FOREST: 'forest' } },
+    forest: { text: 'YOU ARE IN OPEN FOREST, WITH A DEEP VALLEY TO ONE SIDE.',
+            go: { E: 'valley', DOWN: 'valley', VALLEY: 'valley', W: 'road', ROAD: 'road', BUILDING: 'road', BACK: 'road' } },
+    debris: { text: "YOU ARE IN A DEBRIS ROOM, FILLED WITH STUFF WASHED IN FROM THE SURFACE. A LOW WIDE PASSAGE WITH COBBLES BECOMES PLUGGED WITH MUD AND DEBRIS HERE, BUT AN AWKWARD CANYON LEADS UPWARD AND WEST. A NOTE ON THE WALL SAYS 'MAGIC WORD XYZZY'.", go: {} }
+  };
+  const ALIAS = { EAST: 'E', WEST: 'W', NORTH: 'N', SOUTH: 'S', U: 'UP', D: 'DOWN', INSIDE: 'IN' };
+  const screen = document.getElementById('cave-screen');
+  const form = document.getElementById('cave-form');
+  const input = document.getElementById('cave-input');
+  let here = 'road';
+  const say = (html, cls) => {
+    const p = document.createElement('p');
+    if (cls) p.className = cls;
+    p.innerHTML = html;
+    screen.appendChild(p);
+    while (screen.children.length > 8) screen.removeChild(screen.firstChild);
+    screen.scrollTop = screen.scrollHeight;
+  };
+  const deeper = 'THE REST OF THE CAVE IS AT <a href="https://colossalcave.io">COLOSSALCAVE.IO</a>.';
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const raw = input.value.trim().toUpperCase().replace(/[^A-Z0-9 ?]/g, '');
+    input.value = '';
+    if (!raw) return;
+    say('&gt; ' + raw, 'echo');
+    let words = raw.split(/\s+/).filter(w => !['GO', 'WALK', 'RUN', 'THE', 'TO'].includes(w));
+    if (!words.length) words = ['?'];
+    const w = ALIAS[words[0]] || words[0];
+    if (['LOOK', 'L'].includes(w)) return say(ROOMS[here].text);
+    if (['HELP', '?', 'WHAT'].includes(w)) return say('I ALWAYS UNDERSTAND COMPASS DIRECTIONS, OR YOU CAN NAME A NEARBY THING TO HEAD THAT WAY.');
+    if (w === 'XYZZY') {
+      if (here === 'building') { here = 'debris'; say(ROOMS.debris.text); return say(deeper); }
+      if (here === 'debris') { here = 'building'; return say(ROOMS.building.text); }
+      return say('NOTHING HAPPENS.');
+    }
+    if (w === 'PLUGH') return say("A HOLLOW VOICE SAYS 'PLUGH'");
+    if (['INVENTORY', 'INV', 'I'].includes(w)) return say("YOU AREN'T CARRYING ANYTHING. THE LAMP AND THE KEYS ARE IN THE REAL CAVE. " + deeper);
+    if (['TAKE', 'GET', 'UNLOCK', 'OPEN', 'LIGHT', 'DROP'].includes(w)) return say('I NEED MORE DETAILED INSTRUCTIONS TO DO THAT. ' + deeper);
+    if (here === 'debris') return say(deeper);
+    const dest = ROOMS[here].go[w];
+    if (dest) { here = dest; return say(ROOMS[dest].text); }
+    if (['E', 'W', 'N', 'S', 'UP', 'DOWN', 'IN', 'OUT', 'NE', 'NW', 'SE', 'SW'].includes(w)) return say('THERE IS NO WAY TO GO THAT DIRECTION.');
+    say("I DON'T KNOW THAT WORD.");
+  });
+
+})();
+</script>
+</body>
+</html>
