@@ -7,18 +7,19 @@
   --muted: #5c636d;
   --rule: #c4cad1;
   --accent: #8a3b2e;
+  --light: rgba(255, 252, 240, 0.85);
   --sans: "Libre Franklin", "Helvetica Neue", Arial, sans-serif;
   --mono: "Courier Prime", "Courier New", Courier, monospace;
   color-scheme: light;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --wall: #16181b; --card: #1f2226; --ink: #e6e8eb; --muted: #9ba2ac; --rule: #353a42; --accent: #e09583;
+    --wall: #16181b; --card: #1f2226; --ink: #e6e8eb; --muted: #9ba2ac; --rule: #353a42; --accent: #e09583; --light: rgba(255, 236, 200, 0.07);
     color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
-  --wall: #16181b; --card: #1f2226; --ink: #e6e8eb; --muted: #9ba2ac; --rule: #353a42; --accent: #e09583;
+  --wall: #16181b; --card: #1f2226; --ink: #e6e8eb; --muted: #9ba2ac; --rule: #353a42; --accent: #e09583; --light: rgba(255, 236, 200, 0.07);
   color-scheme: dark;
 }
 
@@ -64,72 +65,131 @@ a:hover { color: var(--accent); }
   font: 400 0.8rem var(--mono); letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted);
 }
 
-/* Works */
-.works { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 40px 32px; }
-@media (max-width: 760px) { .works { grid-template-columns: minmax(0, 1fr); } }
-.work { display: grid; gap: 14px; align-content: start; min-width: 0; }
+/* Room 1 — an exhibition hang: wall text, then bays that alternate sides, each lit from above */
+.room { padding-top: 8px; }
+.wall-text {
+  border-top: 1px solid var(--rule); padding-top: 28px;
+  display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr); gap: 4px 48px; align-items: end;
+}
+@media (max-width: 760px) { .wall-text { grid-template-columns: minmax(0, 1fr); } }
+.room-no { grid-column: 1 / -1; font: 400 0.8rem var(--mono); letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); }
+.wall-text h2 { margin: 0; font: 800 clamp(2.4rem, 7vw, 4.6rem)/0.95 var(--sans); letter-spacing: -0.045em; }
+.room-dates { grid-column: 1; margin: 6px 0 0; font: 400 0.95rem var(--mono); color: var(--muted); }
+.wall-text p:last-child { grid-column: 2; grid-row: 2 / span 2; margin: 0; max-width: 58ch; font-size: 1.05rem; }
+@media (max-width: 760px) { .wall-text p:last-child { grid-column: 1; grid-row: auto; margin-top: 14px; } }
+
+.bays { display: grid; gap: clamp(56px, 9vw, 112px); margin-top: clamp(48px, 7vw, 88px); }
+.bay {
+  position: relative; display: grid; gap: 20px 40px; align-items: end;
+  grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr);
+}
+.bay-flip { grid-template-columns: minmax(0, 1fr) minmax(0, 1.55fr); }
+.bay-flip .plate { order: 2; }
+.bay-flip .label { order: 1; justify-self: end; }
+/* Gallery lighting: a soft pool on the wall above each plate */
+.bay::before {
+  content: ""; position: absolute; z-index: 0; pointer-events: none;
+  top: -60px; width: 70%; height: 75%; left: 0;
+  background: radial-gradient(ellipse at 50% 0%, var(--light), transparent 70%);
+}
+.bay-flip::before { left: auto; right: 0; }
+.bay > * { position: relative; z-index: 1; min-width: 0; }
+@media (max-width: 760px) {
+  .bay, .bay-flip { grid-template-columns: minmax(0, 1fr); }
+  .bay-flip .plate, .bay-flip .label { order: 0; justify-self: stretch; }
+  .bay::before { width: 100%; }
+}
 
 .label {
-  background: var(--card); border: 1px solid var(--rule);
-  padding: 16px 18px; display: grid; gap: 6px;
-  font: 400 0.92rem/1.5 var(--mono);
+  max-width: 24rem; background: var(--card); border: 1px solid var(--rule);
+  padding: 16px 18px; display: grid; gap: 8px; font: 400 0.9rem/1.5 var(--mono);
+  margin-bottom: 8px;
 }
-.label .acc { justify-self: end; color: var(--accent); font-weight: 700; font-size: 0.82rem; margin-bottom: -26px; }
-.label h2 { margin: 0; font: 800 1.3rem/1.15 var(--sans); letter-spacing: -0.015em; padding-right: 7ch; }
-.label .medium { color: var(--muted); }
-.label p { margin: 4px 0 0; font: 400 0.98rem/1.55 var(--sans); max-width: 60ch; }
-.label .visit { margin-top: 6px; font-weight: 700; }
+.label .acc { color: var(--accent); font-weight: 700; font-size: 0.8rem; }
+.label h3 { margin: 0; font: 800 1.45rem/1.1 var(--sans); letter-spacing: -0.02em; }
+.label .medium { margin: 0; color: var(--muted); font-style: italic; }
+.label p { margin: 0; font: 400 0.95rem/1.55 var(--sans); }
+.label .medium { font: italic 400 0.88rem/1.5 var(--mono); }
+.label .credit { font: 400 0.8rem var(--mono); color: var(--muted); }
+.label .visit { font-weight: 700; justify-self: start; }
 
-/* Plates: each reproduces the project's own look, so they keep fixed colors in both themes */
-.plate {
-  aspect-ratio: 4 / 3; max-width: 100%; position: relative; overflow: hidden;
-  display: grid; place-items: center; text-decoration: none;
-  box-shadow: 0 1px 0 var(--rule), 0 18px 34px -22px rgba(0, 0, 0, 0.55);
-  transition: transform 0.25s ease;
-}
-a.plate:hover { transform: translateY(-3px); color: inherit; }
-@media (prefers-reduced-motion: reduce) { a.plate:hover { transform: none; } }
+.plate { position: relative; overflow: hidden; max-width: 100%; box-shadow: 0 1px 0 var(--rule), 0 24px 40px -26px rgba(0, 0, 0, 0.6); }
 
-.plate-kino { background: #0c0b0a; color: #efe9dc; font-family: "IM Fell English", Georgia, serif; }
+/* Criteria: a printed running order in Criteria's own house style */
+.plate-criteria { background: #0b0a09; color: #ece7de; width: min(100%, 30rem); justify-self: center; aspect-ratio: 4 / 5; }
+.bill { height: 100%; display: grid; grid-template-rows: auto auto 1fr auto; gap: 10px; padding: clamp(18px, 6%, 32px); }
+.bill-head { display: flex; justify-content: space-between; gap: 8px; font: 400 0.68rem var(--mono); letter-spacing: 0.14em; text-transform: uppercase; color: #8a847a; border-bottom: 1px solid #2c2a27; padding-bottom: 8px; }
+.bill-title { margin: 4px 0 0; font: 700 clamp(2rem, 6vw, 3rem)/0.9 "Archivo", var(--sans); font-stretch: 62%; text-transform: uppercase; letter-spacing: -0.01em; }
+.running { list-style: none; margin: 0; padding: 0; display: grid; align-content: center; gap: 0.35em; }
+.running li { display: grid; grid-template-columns: 2em minmax(0, 1fr) auto; gap: 0.6em; align-items: baseline; }
+.running span, .running i { font: 400 0.72rem var(--mono); color: #8a847a; font-style: normal; font-variant-numeric: tabular-nums; }
+.running b { font: 400 clamp(0.95rem, 2.2vw, 1.15rem)/1.25 "Source Serif 4", Georgia, serif; }
+.running .gone b { text-decoration: line-through; text-decoration-thickness: 1px; color: #8a847a; }
+.survival { display: flex; align-items: center; gap: 10px; font: 400 0.68rem var(--mono); letter-spacing: 0.1em; text-transform: uppercase; color: #aaa49a; border-top: 1px solid #2c2a27; padding-top: 10px; }
+.meter { flex: 0 0 72px; height: 4px; background: #2c2a27; }
+.meter i { display: block; height: 100%; background: #ece7de; }
+
+/* Kinopolis: Academy-ratio intertitles that change like reels */
+.plate-kino { background: #0c0b0a; color: #efe9dc; aspect-ratio: 1.375; display: grid; place-items: center; font-family: "IM Fell English", Georgia, serif; }
 .plate-kino .frame { position: absolute; inset: 7%; border: 1px solid #8b8070; outline: 1px solid #5a5248; outline-offset: 5px; }
-.plate-kino .card { position: relative; text-align: center; padding: 0 14%; display: grid; gap: 0.5em; }
-.plate-kino .card small { font-family: "IM Fell English SC", Georgia, serif; letter-spacing: 0.3em; font-size: clamp(0.7rem, 1.6vw, 0.9rem); color: #b8ab94; }
-.plate-kino .card em { font-size: clamp(1.15rem, 2.8vw, 1.65rem); line-height: 1.25; }
+.plate-kino .cards { display: grid; width: 100%; }
+.plate-kino .card { grid-area: 1 / 1; text-align: center; padding: 0 16%; display: grid; gap: 0.6em; opacity: 0; transition: opacity 0.9s ease; }
+.plate-kino .card.is-on { opacity: 1; }
+.plate-kino small { font-family: "IM Fell English SC", Georgia, serif; letter-spacing: 0.32em; text-transform: uppercase; font-size: clamp(0.72rem, 1.6vw, 0.9rem); color: #b8ab94; }
+.plate-kino em { font-size: clamp(1.15rem, 3vw, 1.85rem); line-height: 1.25; }
+.plate-kino .leader { position: absolute; right: 10%; bottom: 10%; width: 14px; height: 14px; border: 1px solid #8b8070; border-radius: 50%; }
+.plate-kino .leader::after { content: ""; position: absolute; inset: 2px; border-radius: 50%; background: conic-gradient(#8b8070 var(--sweep, 0deg), transparent 0); }
+@media (prefers-reduced-motion: no-preference) {
+  .plate-kino .cards { animation: weave 0.24s steps(2) infinite; }
+}
+@keyframes weave { 50% { transform: translate(0.4px, -0.6px); } }
 
-.plate-criteria { background: #0b0a09; color: #ece7de; place-items: stretch; }
-.plate-criteria .bill { display: grid; grid-template-rows: auto 1fr auto; padding: 7% 8%; gap: 10px; }
-.plate-criteria .k { font: 400 0.72rem var(--mono); letter-spacing: 0.16em; color: #8a847a; display: flex; justify-content: space-between; border-bottom: 1px solid #2c2a27; padding-bottom: 8px; }
-.plate-criteria ol { list-style: none; margin: 0; padding: 0; display: grid; align-content: center; gap: 0.55em; }
-.plate-criteria li { display: grid; grid-template-columns: 3.2em minmax(0, 1fr); gap: 0.6em; align-items: baseline; }
-.plate-criteria li span { font: 400 0.75rem var(--mono); color: #8a847a; font-variant-numeric: tabular-nums; }
-.plate-criteria li b { font: 400 clamp(1rem, 2.4vw, 1.3rem)/1.2 Georgia, "Times New Roman", serif; }
-.plate-criteria .rec { font: 400 0.72rem var(--mono); color: #aaa49a; }
+/* Colossal Cave: a working terminal behind a CRT bezel */
+.plate-cave { background: #1b1d1a; padding: clamp(12px, 3%, 22px); border-radius: 10px; }
+.crt {
+  aspect-ratio: 4 / 3; max-width: 100%; display: grid; grid-template-rows: 1fr auto;
+  background: radial-gradient(ellipse at 50% 45%, #0a140a, #030603 85%); border-radius: 18px / 24px;
+  color: #3cf63c; font: 400 clamp(1rem, 2.1vw, 1.25rem)/1.25 "VT323", var(--mono); text-shadow: 0 0 6px rgba(60, 246, 60, 0.4);
+  box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.8);
+}
+.crt .screen { overflow-y: auto; padding: 6% 7% 0; display: grid; align-content: end; gap: 0.7em; scrollbar-width: none; }
+.crt .screen p { margin: 0; }
+.crt .screen .echo { color: #1e9a1e; }
+.crt .screen a { color: inherit; }
+.prompt { display: flex; gap: 0.5em; align-items: baseline; padding: 0.5em 7% 6%; }
+.prompt label { color: #3cf63c; }
+.prompt input {
+  flex: 1; min-width: 0; background: transparent; border: 0; outline: 0; padding: 0;
+  color: #3cf63c; font: inherit; text-transform: uppercase; caret-color: #3cf63c; text-shadow: inherit;
+}
+.prompt input::placeholder { color: #1e7a1e; }
+.prompt:focus-within { box-shadow: inset 0 -1px 0 #1e7a1e; }
 
-.plate-cave { background: #050805; color: #3cf63c; place-items: stretch; font: 400 clamp(1rem, 2.3vw, 1.3rem)/1.25 "VT323", var(--mono); text-shadow: 0 0 6px rgba(60, 246, 60, 0.35); }
-.plate-cave .screen { padding: 7% 8%; display: grid; align-content: start; gap: 0.8em; }
-.plate-cave .screen p { margin: 0; }
-.plate-cave .dim { color: #1e9a1e; }
-.plate-cave .cur::after { content: "\2588"; animation: blink 1.1s steps(1) infinite; }
-@keyframes blink { 50% { opacity: 0; } }
-@media (prefers-reduced-motion: reduce) { .plate-cave .cur::after { animation: none; } }
-
-.plate-mahjong { background: #6e1c18; }
+/* Old Lady Mahjong: a playable corner of the table */
+.plate-mahjong { background: #6e1c18; aspect-ratio: 1; width: min(100%, 34rem); justify-self: center; padding: 6%; }
 .plate-mahjong .felt {
-  position: absolute; inset: 8%; background: radial-gradient(ellipse at 50% 40%, #2b6b4b, #174431 75%);
+  height: 100%; display: grid; grid-template-rows: 1fr auto auto; gap: 12px; padding: 6%;
+  background: radial-gradient(ellipse at 50% 40%, #2b6b4b, #174431 75%);
   box-shadow: inset 0 0 0 2px #4a1210, inset 0 0 40px rgba(0, 0, 0, 0.35);
-  display: grid; place-items: center;
 }
-.plate-mahjong .rack { display: flex; gap: clamp(4px, 1.2vw, 8px); }
-.plate-mahjong .tile {
-  width: clamp(36px, 8vw, 54px); aspect-ratio: 3 / 4; background: linear-gradient(#fbf7ec, #ece4cf);
-  border-radius: 5px; box-shadow: 0 3px 0 #c9b98f, 0 6px 10px rgba(0, 0, 0, 0.35);
+.pond { display: flex; flex-wrap: wrap; align-content: center; justify-content: center; gap: 4px; }
+.pond .tile { width: clamp(22px, 5vw, 32px); font-size: clamp(0.8rem, 2.2vw, 1.1rem); cursor: default; transform: rotate(var(--r, 0deg)); }
+.auntie { margin: 0; min-height: 2.6em; text-align: center; font: italic 400 clamp(0.85rem, 2vw, 1rem)/1.3 "IM Fell English", Georgia, serif; color: #f1e6c8; }
+.hand { display: flex; justify-content: center; gap: clamp(3px, 0.9vw, 6px); }
+.tile {
+  appearance: none; border: 0; padding: 0; cursor: pointer;
+  width: clamp(30px, 7vw, 46px); aspect-ratio: 3 / 4; border-radius: 4px;
+  background: linear-gradient(#fbf7ec, #ece4cf); box-shadow: 0 3px 0 #c9b98f, 0 6px 10px rgba(0, 0, 0, 0.35);
   display: grid; place-items: center;
-  font: 700 clamp(1.2rem, 3.6vw, 1.9rem)/1 "Noto Serif TC", "Songti SC", "PMingLiU", serif;
+  font: 700 clamp(1rem, 3vw, 1.6rem)/1 "Noto Serif TC", "Songti SC", "PMingLiU", serif;
+  transition: transform 0.15s ease;
 }
-.plate-mahjong .red { color: #b3221b; }
-.plate-mahjong .green { color: #1f6b3a; }
-.plate-mahjong .blue { color: #1d3c78; }
-.plate-mahjong .auntie { position: absolute; bottom: 9%; font: 400 0.75rem var(--mono); color: #d9ccb0; letter-spacing: 0.08em; }
+.hand .tile:hover, .hand .tile:focus-visible { transform: translateY(-6px); }
+.tile.red { color: #b3221b; } .tile.green { color: #1f6b3a; } .tile.blue { color: #1d3c78; } .tile.ink { color: #1f2328; }
+.tile.white::before { content: ""; width: 58%; height: 66%; border: 2px solid #1d3c78; border-radius: 2px; }
+.tile .num { display: grid; line-height: 0.95; font-size: 0.8em; }
+.tile .num small { font-size: 0.75em; color: #b3221b; }
+@media (prefers-reduced-motion: reduce) { .hand .tile:hover, .hand .tile:focus-visible { transform: none; } .plate-kino .card { transition: none; } }
 
 /* About strip */
 .about { margin-top: 64px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.6fr); gap: 24px 48px; }

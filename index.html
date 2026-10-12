@@ -11,7 +11,7 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23fbfbf9'/%3E%3Crect x='1' y='1' width='30' height='30' fill='none' stroke='%231f2328' stroke-width='2'/%3E%3Ctext x='16' y='22' font-family='Arial' font-weight='800' font-size='14' text-anchor='middle' fill='%238a3b2e'%3ETM%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&family=Libre+Franklin:wght@400;600;800&family=VT323&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..100,400..800&family=Courier+Prime:wght@400;700&family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&family=Libre+Franklin:wght@400;600;800&family=Source+Serif+4:opsz,wght@8..60,400&family=VT323&display=swap">
 <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
@@ -36,85 +36,108 @@
     </p>
   </section>
 
-  <div class="section-head" id="works"><span>Works, 2026</span><span>4 objects</span></div>
+  <section class="room" id="works" aria-labelledby="room-title">
+    <header class="wall-text">
+      <span class="room-no">Room 1</span>
+      <h2 id="room-title">Restorations</h2>
+      <p class="room-dates">Four works, January–October 2026</p>
+      <p>Each work in this room takes something old and makes it usable again: the first films, a repertory film catalog, a parlour game and the first text adventure. Every plate works. Wait for the next title card, check what's still streaming, play a tile, or type into the terminal.</p>
+    </header>
 
-  <div class="works">
-    <article class="work">
-      <a class="plate plate-criteria" href="https://search-criteria.com" aria-label="Visit Criteria">
-        <div class="bill" aria-hidden="true">
-          <div class="k"><span>PROGRAMME</span><span>TONIGHT</span></div>
-          <ol>
-            <li><span>7:00</span><b>Late Spring</b></li>
-            <li><span>9:00</span><b>Tokyo Story</b></li>
-            <li><span>11:15</span><b>Floating Weeds</b></li>
-          </ol>
-          <div class="rec">Yasujirō Ozu · Japan · 1949–1959</div>
-        </div>
-      </a>
-      <div class="label">
-        <span class="acc">TM.2026.01</span>
-        <h2>Criteria</h2>
-        <span class="medium">Begun January 2026<br>Python (FastAPI), Next.js, React Native, MCP</span>
-        <p>A companion to the Criterion Channel. It adds full cast and crew to every film, lets you move through a person's filmography, and keeps study lists and notes. An MCP server lets AI assistants search the catalog.</p>
-        <a class="visit" href="https://search-criteria.com">search-criteria.com →</a>
-      </div>
-    </article>
-
-    <article class="work">
-      <a class="plate plate-kino" href="https://www.kino-polis.com" aria-label="Visit Kinopolis">
-        <span class="frame" aria-hidden="true"></span>
-        <div class="card" aria-hidden="true">
-          <small>KINOPOLIS</small>
-          <em>The essential films of early cinema, and how cinema came to be.</em>
-        </div>
-      </a>
-      <div class="label">
-        <span class="acc">TM.2026.02</span>
-        <h2>Kinopolis</h2>
-        <span class="medium">Begun February 2026<br>Next.js, Supabase, TMDB, MCP</span>
-        <p>A curated guide to the essential films of early cinema. Each film comes with the best public version available and the history needed to see how cinema developed across countries, movements and artists.</p>
-        <a class="visit" href="https://www.kino-polis.com">kino-polis.com →</a>
-      </div>
-    </article>
-
-    <article class="work">
-      <a class="plate plate-cave" href="https://colossalcave.io" aria-label="Play Colossal Cave">
-        <div class="screen" aria-hidden="true">
-          <p>YOU ARE STANDING AT THE END OF A ROAD BEFORE A SMALL BRICK BUILDING. AROUND YOU IS A FOREST.</p>
-          <p class="dim">&gt; ENTER BUILDING</p>
-          <p>YOU ARE INSIDE A BUILDING, A WELL HOUSE FOR A LARGE SPRING.</p>
-          <p class="cur">&gt; </p>
-        </div>
-      </a>
-      <div class="label">
-        <span class="acc">TM.2026.03</span>
-        <h2>Colossal Cave</h2>
-        <span class="medium">Begun June 2026<br>JavaScript, three.js, after Fortran IV (1977)</span>
-        <p>A faithful port of Will Crowther's original 1977 text adventure, from before Don Woods expanded it. The engine follows the Fortran source line by line. A second version draws the cave around you in first person.</p>
-        <a class="visit" href="https://colossalcave.io">colossalcave.io →</a>
-      </div>
-    </article>
-
-    <article class="work">
-      <a class="plate plate-mahjong" href="https://www.oldladymahjong.com" aria-label="Play Old Lady Mahjong">
-        <div class="felt" aria-hidden="true">
-          <div class="rack">
-            <span class="tile red">中</span>
-            <span class="tile green">發</span>
-            <span class="tile blue">東</span>
+    <div class="bays">
+      <article class="bay">
+        <div class="plate plate-criteria">
+          <div class="bill">
+            <div class="bill-head"><span>Adventures in Moviegoing</span><span>June 2024</span></div>
+            <p class="bill-title">Paul Schrader</p>
+            <ol class="running">
+              <li><span>01</span><b>Journey to Italy</b><i>1954</i></li>
+              <li><span>02</span><b>Ordet</b><i>1955</i></li>
+              <li class="gone"><span>03</span><b>Last Year at Marienbad</b><i>1961</i></li>
+              <li><span>04</span><b>An Autumn Afternoon</b><i>1962</i></li>
+              <li><span>05</span><b>Red Desert</b><i>1964</i></li>
+              <li><span>06</span><b>Masculin féminin</b><i>1966</i></li>
+              <li><span>07</span><b>Claire’s Knee</b><i>1970</i></li>
+              <li><span>08</span><b>In the Mood for Love</b><i>2000</i></li>
+            </ol>
+            <div class="survival" role="img" aria-label="7 of 8 films still streaming">
+              <span class="meter"><i style="width:87.5%"></i></span>
+              <span>7 of 8 still streaming</span>
+            </div>
           </div>
         </div>
-        <span class="auntie" aria-hidden="true">AUNTIE IS WATCHING</span>
-      </a>
-      <div class="label">
-        <span class="acc">TM.2026.04</span>
-        <h2>Old Lady Mahjong</h2>
-        <span class="medium">Begun September 2026<br>React, Express, Supabase</span>
-        <p>Online mahjong in four styles: Hong Kong Old Style, Japanese Riichi, American and Sichuan. The server enforces every rule. You can play AI opponents or invite friends, and Auntie's lessons teach newcomers.</p>
-        <a class="visit" href="https://www.oldladymahjong.com">oldladymahjong.com →</a>
-      </div>
-    </article>
-  </div>
+        <div class="label">
+          <span class="acc">TM.2026.01</span>
+          <h3>Criteria</h3>
+          <p class="medium">Python (FastAPI), Next.js, React Native, MCP<br>Begun January 2026</p>
+          <p>A companion to the Criterion Channel. It adds full credits to every film, follows a person through their filmography, and keeps track of how much of each programme is still streaming. Films that have left are struck through, as on this plate.</p>
+          <p class="credit">Collection of the artist</p>
+          <a class="visit" href="https://search-criteria.com">search-criteria.com →</a>
+        </div>
+      </article>
+
+      <article class="bay bay-flip">
+        <div class="plate plate-kino">
+          <span class="frame" aria-hidden="true"></span>
+          <div class="cards" aria-live="off">
+            <div class="card is-on"><small>Kinopolis</small><em>The essential films of early cinema.</em></div>
+            <div class="card"><small>Reel 2</small><em>Lumière. Méliès. Griffith. Murnau. Dreyer. Vertov. Keaton.</em></div>
+            <div class="card"><small>Reel 3</small><em>The best public version of each film, and the history around it.</em></div>
+            <div class="card"><small>The End</small><em>Free to watch, and free to study.</em></div>
+          </div>
+          <span class="leader" aria-hidden="true"></span>
+        </div>
+        <div class="label">
+          <span class="acc">TM.2026.02</span>
+          <h3>Kinopolis</h3>
+          <p class="medium">Next.js, Supabase, TMDB, MCP<br>Begun February 2026</p>
+          <p>A curated guide to the essential films of early cinema. Each film comes with the best public version available and the context needed to see how cinema developed across countries, movements and artists.</p>
+          <p class="credit">Collection of the artist</p>
+          <a class="visit" href="https://www.kino-polis.com">kino-polis.com →</a>
+        </div>
+      </article>
+
+      <article class="bay">
+        <div class="plate plate-cave">
+          <div class="crt">
+            <div class="screen" id="cave-screen" aria-live="polite">
+              <p>YOU ARE STANDING AT THE END OF A ROAD BEFORE A SMALL BRICK BUILDING. AROUND YOU IS A FOREST. A SMALL STREAM FLOWS OUT OF THE BUILDING AND DOWN A GULLY.</p>
+            </div>
+            <form class="prompt" id="cave-form" autocomplete="off">
+              <label for="cave-input">&gt;</label>
+              <input id="cave-input" name="cmd" type="text" spellcheck="false" autocapitalize="characters" placeholder="TRY: ENTER BUILDING" aria-label="Command">
+            </form>
+          </div>
+        </div>
+        <div class="label">
+          <span class="acc">TM.2026.03</span>
+          <h3>Colossal Cave</h3>
+          <p class="medium">JavaScript and three.js, after Fortran IV (1977)<br>Begun June 2026</p>
+          <p>A faithful port of Will Crowther's original 1977 text adventure, from before Don Woods expanded it. The engine follows the Fortran source line by line, and a second version draws the cave around you in first person. The terminal on this plate knows the first few rooms, word for word.</p>
+          <p class="credit">Collection of the artist</p>
+          <a class="visit" href="https://colossalcave.io">colossalcave.io →</a>
+        </div>
+      </article>
+
+      <article class="bay bay-flip">
+        <div class="plate plate-mahjong">
+          <div class="felt">
+            <div class="pond" id="mj-pond" aria-label="Discards"></div>
+            <p class="auntie" id="mj-auntie" aria-live="polite">Auntie is watching. Pick a tile to throw.</p>
+            <div class="hand" id="mj-hand" role="group" aria-label="Your hand"></div>
+          </div>
+        </div>
+        <div class="label">
+          <span class="acc">TM.2026.04</span>
+          <h3>Old Lady Mahjong</h3>
+          <p class="medium">React, Express, Supabase<br>Begun September 2026</p>
+          <p>Online mahjong in four styles: Hong Kong Old Style, Japanese Riichi, American and Sichuan. The server enforces every rule. You can play AI opponents or invite friends, and Auntie's lessons teach newcomers. She has opinions about your discards.</p>
+          <p class="credit">Collection of the artist</p>
+          <a class="visit" href="https://www.oldladymahjong.com">oldladymahjong.com →</a>
+        </div>
+      </article>
+    </div>
+  </section>
 
   <section class="about">
     <h2>Twenty years of building teams and platforms</h2>
@@ -130,5 +153,129 @@
     <span>Brooklyn, New York</span>
   </footer>
 </div>
+<script>
+(() => {
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Kinopolis: change title cards like reels, with a leader dial that sweeps between them
+  const cards = [...document.querySelectorAll('.plate-kino .card')];
+  const leader = document.querySelector('.plate-kino .leader');
+  if (cards.length && !reduce) {
+    let i = 0, t0 = performance.now();
+    const HOLD = 4200;
+    const tick = (now) => {
+      const p = (now - t0) / HOLD;
+      if (p >= 1) { cards[i].classList.remove('is-on'); i = (i + 1) % cards.length; cards[i].classList.add('is-on'); t0 = now; }
+      leader.style.setProperty('--sweep', Math.min(p, 1) * 360 + 'deg');
+      requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
+  }
+
+  // Colossal Cave: the first rooms of Crowther's 1977 cave, in his words
+  const ROOMS = {
+    road: { text: 'YOU ARE STANDING AT THE END OF A ROAD BEFORE A SMALL BRICK BUILDING. AROUND YOU IS A FOREST. A SMALL STREAM FLOWS OUT OF THE BUILDING AND DOWN A GULLY.',
+            go: { E: 'building', IN: 'building', ENTER: 'building', BUILDING: 'building', HOUSE: 'building', W: 'hill', UP: 'hill', ROAD: 'hill', S: 'valley', DOWN: 'valley', VALLEY: 'valley', STREAM: 'valley', DOWNSTREAM: 'valley', N: 'forest', FOREST: 'forest' } },
+    hill: { text: 'YOU HAVE WALKED UP A HILL, STILL IN THE FOREST. THE ROAD NOW SLOPES BACK DOWN THE OTHER SIDE OF THE HILL. THERE IS A BUILDING IN THE DISTANCE.',
+            go: { E: 'road', BUILDING: 'road', DOWN: 'road', ROAD: 'road', BACK: 'road', N: 'forest', S: 'forest', FOREST: 'forest' } },
+    building: { text: 'YOU ARE INSIDE A BUILDING, A WELL HOUSE FOR A LARGE SPRING.',
+            go: { OUT: 'road', OUTSIDE: 'road', EXIT: 'road', LEAVE: 'road', W: 'road', BACK: 'road' } },
+    valley: { text: 'YOU ARE IN A VALLEY IN THE FOREST BESIDE A STREAM TUMBLING ALONG A ROCKY BED.',
+            go: { N: 'road', UP: 'road', BUILDING: 'road', UPSTREAM: 'road', BACK: 'road', E: 'forest', W: 'forest', FOREST: 'forest' } },
+    forest: { text: 'YOU ARE IN OPEN FOREST, WITH A DEEP VALLEY TO ONE SIDE.',
+            go: { E: 'valley', DOWN: 'valley', VALLEY: 'valley', W: 'road', ROAD: 'road', BUILDING: 'road', BACK: 'road' } },
+    debris: { text: "YOU ARE IN A DEBRIS ROOM, FILLED WITH STUFF WASHED IN FROM THE SURFACE. A LOW WIDE PASSAGE WITH COBBLES BECOMES PLUGGED WITH MUD AND DEBRIS HERE, BUT AN AWKWARD CANYON LEADS UPWARD AND WEST. A NOTE ON THE WALL SAYS 'MAGIC WORD XYZZY'.", go: {} }
+  };
+  const ALIAS = { EAST: 'E', WEST: 'W', NORTH: 'N', SOUTH: 'S', U: 'UP', D: 'DOWN', INSIDE: 'IN' };
+  const screen = document.getElementById('cave-screen');
+  const form = document.getElementById('cave-form');
+  const input = document.getElementById('cave-input');
+  let here = 'road';
+  const say = (html, cls) => {
+    const p = document.createElement('p');
+    if (cls) p.className = cls;
+    p.innerHTML = html;
+    screen.appendChild(p);
+    while (screen.children.length > 8) screen.removeChild(screen.firstChild);
+    screen.scrollTop = screen.scrollHeight;
+  };
+  const deeper = 'THE REST OF THE CAVE IS AT <a href="https://colossalcave.io">COLOSSALCAVE.IO</a>.';
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const raw = input.value.trim().toUpperCase().replace(/[^A-Z0-9 ?]/g, '');
+    input.value = '';
+    if (!raw) return;
+    say('&gt; ' + raw, 'echo');
+    let words = raw.split(/\s+/).filter(w => !['GO', 'WALK', 'RUN', 'THE', 'TO'].includes(w));
+    if (!words.length) words = ['?'];
+    const w = ALIAS[words[0]] || words[0];
+    if (['LOOK', 'L'].includes(w)) return say(ROOMS[here].text);
+    if (['HELP', '?', 'WHAT'].includes(w)) return say('I ALWAYS UNDERSTAND COMPASS DIRECTIONS, OR YOU CAN NAME A NEARBY THING TO HEAD THAT WAY.');
+    if (w === 'XYZZY') {
+      if (here === 'building') { here = 'debris'; say(ROOMS.debris.text); return say(deeper); }
+      if (here === 'debris') { here = 'building'; return say(ROOMS.building.text); }
+      return say('NOTHING HAPPENS.');
+    }
+    if (w === 'PLUGH') return say("A HOLLOW VOICE SAYS 'PLUGH'");
+    if (['INVENTORY', 'INV', 'I'].includes(w)) return say("YOU AREN'T CARRYING ANYTHING. THE LAMP AND THE KEYS ARE IN THE REAL CAVE. " + deeper);
+    if (['TAKE', 'GET', 'UNLOCK', 'OPEN', 'LIGHT', 'DROP'].includes(w)) return say('I NEED MORE DETAILED INSTRUCTIONS TO DO THAT. ' + deeper);
+    if (here === 'debris') return say(deeper);
+    const dest = ROOMS[here].go[w];
+    if (dest) { here = dest; return say(ROOMS[dest].text); }
+    if (['E', 'W', 'N', 'S', 'UP', 'DOWN', 'IN', 'OUT', 'NE', 'NW', 'SE', 'SW'].includes(w)) return say('THERE IS NO WAY TO GO THAT DIRECTION.');
+    say("I DON'T KNOW THAT WORD.");
+  });
+
+  // Old Lady Mahjong: throw a tile, hear about it
+  const HAND = [
+    { k: 'ch1', html: '<span class="num">一<small>萬</small></span>', cls: 'ink', name: 'one of characters' },
+    { k: 'ch9', html: '<span class="num">九<small>萬</small></span>', cls: 'ink', name: 'nine of characters' },
+    { k: 'e1', html: '東', cls: 'ink', name: 'east wind' },
+    { k: 'e2', html: '東', cls: 'ink', name: 'east wind' },
+    { k: 'red', html: '中', cls: 'red', name: 'red dragon' },
+    { k: 'grn', html: '發', cls: 'green', name: 'green dragon' },
+    { k: 'wht', html: '', cls: 'white', name: 'white dragon' }
+  ];
+  const SAYS = {
+    ch1: 'A terminal tile. Fine. Nobody wants it.',
+    ch9: 'Good. Ends of the suit go first.',
+    e1: 'You had a pair of East and you broke it?',
+    e2: 'Now the other East? Auntie is lying down.',
+    red: 'Throwing a dragon this early. Bold.',
+    grn: 'Someone at this table wanted that. You will see.',
+    wht: 'The white dragon. People forget it is a tile at all.'
+  };
+  const handEl = document.getElementById('mj-hand');
+  const pond = document.getElementById('mj-pond');
+  const auntie = document.getElementById('mj-auntie');
+  const deal = () => {
+    handEl.innerHTML = ''; pond.innerHTML = '';
+    for (const t of HAND) {
+      const b = document.createElement('button');
+      b.type = 'button'; b.className = 'tile ' + t.cls; b.innerHTML = t.html;
+      b.setAttribute('aria-label', 'Throw the ' + t.name);
+      b.addEventListener('click', () => {
+        const d = document.createElement('span');
+        d.className = 'tile ' + t.cls; d.innerHTML = t.html; d.setAttribute('aria-hidden', 'true');
+        d.style.setProperty('--r', (Math.random() * 10 - 5).toFixed(1) + 'deg');
+        pond.appendChild(d);
+        b.remove();
+        auntie.textContent = handEl.children.length
+          ? SAYS[t.k]
+          : 'Nothing left in your hand. Come and play a real game.';
+        if (!handEl.children.length) {
+          const again = document.createElement('button');
+          again.type = 'button'; again.className = 'tile ink'; again.textContent = '洗';
+          again.setAttribute('aria-label', 'Shuffle and deal again');
+          again.addEventListener('click', () => { deal(); auntie.textContent = 'Again. Watch your Easts this time.'; });
+          handEl.appendChild(again);
+        }
+      });
+      handEl.appendChild(b);
+    }
+  };
+  deal();
+})();
+</script>
 </body>
 </html>
