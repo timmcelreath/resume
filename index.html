@@ -41,52 +41,30 @@
       <span class="room-no">Room 1</span>
       <h2 id="room-title">Restorations</h2>
       <p class="room-dates">Four works, January–October 2026</p>
-      <p>Each work in this room takes something old and makes it usable again: the first films, a repertory film catalog, a parlour game and the first text adventure. Every plate works. Wait for the next title card, check what's still streaming, play a tile, or type into the terminal.</p>
+      <p>Each work in this room takes something old and makes it usable again: the first films, a repertory film catalog, a parlour game and the first text adventure. Three are shown as they look today. The fourth still works: type into the terminal.</p>
     </header>
 
     <div class="bays">
       <article class="bay">
-        <div class="plate plate-criteria">
-          <div class="bill">
-            <div class="bill-head"><span>Adventures in Moviegoing</span><span>June 2024</span></div>
-            <p class="bill-title">Paul Schrader</p>
-            <ol class="running">
-              <li><span>01</span><b>Journey to Italy</b><i>1954</i></li>
-              <li><span>02</span><b>Ordet</b><i>1955</i></li>
-              <li class="gone"><span>03</span><b>Last Year at Marienbad</b><i>1961</i></li>
-              <li><span>04</span><b>An Autumn Afternoon</b><i>1962</i></li>
-              <li><span>05</span><b>Red Desert</b><i>1964</i></li>
-              <li><span>06</span><b>Masculin féminin</b><i>1966</i></li>
-              <li><span>07</span><b>Claire’s Knee</b><i>1970</i></li>
-              <li><span>08</span><b>In the Mood for Love</b><i>2000</i></li>
-            </ol>
-            <div class="survival" role="img" aria-label="7 of 8 films still streaming">
-              <span class="meter"><i style="width:87.5%"></i></span>
-              <span>7 of 8 still streaming</span>
-            </div>
-          </div>
-        </div>
+        <figure class="plate plate-shot">
+          <a href="https://search-criteria.com"><img src="/images/criteria.jpg" width="1600" height="1000" loading="lazy" alt="The Criteria homepage: a Kiyoshi Kurosawa programme leads Tonight, under navigation for Programmes, Voices, The Daily and Library."></a>
+          <figcaption>Homepage, October 2026</figcaption>
+        </figure>
         <div class="label">
           <span class="acc">TM.2026.01</span>
           <h3>Criteria</h3>
           <p class="medium">Python (FastAPI), Next.js, React Native, MCP<br>Begun January 2026</p>
-          <p>A companion to the Criterion Channel. It adds full credits to every film, follows a person through their filmography, and keeps track of how much of each programme is still streaming. Films that have left are struck through, as on this plate.</p>
+          <p>A companion to the Criterion Channel. It adds full credits to every film, follows a person through their filmography, and keeps track of how much of each programme is still streaming.</p>
           <p class="credit">Collection of the artist</p>
           <a class="visit" href="https://search-criteria.com">search-criteria.com →</a>
         </div>
       </article>
 
       <article class="bay bay-flip">
-        <div class="plate plate-kino">
-          <span class="frame" aria-hidden="true"></span>
-          <div class="cards" aria-live="off">
-            <div class="card is-on"><small>Kinopolis</small><em>The essential films of early cinema.</em></div>
-            <div class="card"><small>Reel 2</small><em>Lumière. Méliès. Griffith. Murnau. Dreyer. Vertov. Keaton.</em></div>
-            <div class="card"><small>Reel 3</small><em>The best public version of each film, and the history around it.</em></div>
-            <div class="card"><small>The End</small><em>Free to watch, and free to study.</em></div>
-          </div>
-          <span class="leader" aria-hidden="true"></span>
-        </div>
+        <figure class="plate plate-shot">
+          <a href="https://www.kino-polis.com"><img src="/images/kinopolis.jpg" width="1600" height="1000" loading="lazy" alt="The Kinopolis homepage: Vsevolod Pudovkin's Mother (1926) as film of the day, released 100 years ago today."></a>
+          <figcaption>Homepage, October 2026</figcaption>
+        </figure>
         <div class="label">
           <span class="acc">TM.2026.02</span>
           <h3>Kinopolis</h3>
@@ -120,18 +98,15 @@
       </article>
 
       <article class="bay bay-flip">
-        <div class="plate plate-mahjong">
-          <div class="felt">
-            <div class="pond" id="mj-pond" aria-label="Discards"></div>
-            <p class="auntie" id="mj-auntie" aria-live="polite">Auntie is watching. Pick a tile to throw.</p>
-            <div class="hand" id="mj-hand" role="group" aria-label="Your hand"></div>
-          </div>
-        </div>
+        <figure class="plate plate-shot">
+          <a href="https://www.oldladymahjong.com"><img src="/images/mahjong.jpg" width="1600" height="1000" loading="lazy" alt="The Old Lady Mahjong homepage: “Warm on the porch. Lethal at the table.” beside an illustration of Auntie holding a tile."></a>
+          <figcaption>Homepage, October 2026</figcaption>
+        </figure>
         <div class="label">
           <span class="acc">TM.2026.04</span>
           <h3>Old Lady Mahjong</h3>
           <p class="medium">React, Express, Supabase<br>Begun September 2026</p>
-          <p>Online mahjong in four styles: Hong Kong Old Style, Japanese Riichi, American and Sichuan. The server enforces every rule. You can play AI opponents or invite friends, and Auntie's lessons teach newcomers. She has opinions about your discards.</p>
+          <p>Online mahjong in four styles: Hong Kong Old Style, Japanese Riichi, American and Sichuan. The server enforces every rule. You can play AI opponents or invite friends, and Auntie's lessons teach newcomers. Her opening line: &ldquo;Sit down. I already shuffled.&rdquo;</p>
           <p class="credit">Collection of the artist</p>
           <a class="visit" href="https://www.oldladymahjong.com">oldladymahjong.com →</a>
         </div>
@@ -155,23 +130,6 @@
 </div>
 <script>
 (() => {
-  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-  // Kinopolis: change title cards like reels, with a leader dial that sweeps between them
-  const cards = [...document.querySelectorAll('.plate-kino .card')];
-  const leader = document.querySelector('.plate-kino .leader');
-  if (cards.length && !reduce) {
-    let i = 0, t0 = performance.now();
-    const HOLD = 4200;
-    const tick = (now) => {
-      const p = (now - t0) / HOLD;
-      if (p >= 1) { cards[i].classList.remove('is-on'); i = (i + 1) % cards.length; cards[i].classList.add('is-on'); t0 = now; }
-      leader.style.setProperty('--sweep', Math.min(p, 1) * 360 + 'deg');
-      requestAnimationFrame(tick);
-    };
-    requestAnimationFrame(tick);
-  }
-
   // Colossal Cave: the first rooms of Crowther's 1977 cave, in his words
   const ROOMS = {
     road: { text: 'YOU ARE STANDING AT THE END OF A ROAD BEFORE A SMALL BRICK BUILDING. AROUND YOU IS A FOREST. A SMALL STREAM FLOWS OUT OF THE BUILDING AND DOWN A GULLY.',
@@ -226,55 +184,6 @@
     say("I DON'T KNOW THAT WORD.");
   });
 
-  // Old Lady Mahjong: throw a tile, hear about it
-  const HAND = [
-    { k: 'ch1', html: '<span class="num">一<small>萬</small></span>', cls: 'ink', name: 'one of characters' },
-    { k: 'ch9', html: '<span class="num">九<small>萬</small></span>', cls: 'ink', name: 'nine of characters' },
-    { k: 'e1', html: '東', cls: 'ink', name: 'east wind' },
-    { k: 'e2', html: '東', cls: 'ink', name: 'east wind' },
-    { k: 'red', html: '中', cls: 'red', name: 'red dragon' },
-    { k: 'grn', html: '發', cls: 'green', name: 'green dragon' },
-    { k: 'wht', html: '', cls: 'white', name: 'white dragon' }
-  ];
-  const SAYS = {
-    ch1: 'A terminal tile. Fine. Nobody wants it.',
-    ch9: 'Good. Ends of the suit go first.',
-    e1: 'You had a pair of East and you broke it?',
-    e2: 'Now the other East? Auntie is lying down.',
-    red: 'Throwing a dragon this early. Bold.',
-    grn: 'Someone at this table wanted that. You will see.',
-    wht: 'The white dragon. People forget it is a tile at all.'
-  };
-  const handEl = document.getElementById('mj-hand');
-  const pond = document.getElementById('mj-pond');
-  const auntie = document.getElementById('mj-auntie');
-  const deal = () => {
-    handEl.innerHTML = ''; pond.innerHTML = '';
-    for (const t of HAND) {
-      const b = document.createElement('button');
-      b.type = 'button'; b.className = 'tile ' + t.cls; b.innerHTML = t.html;
-      b.setAttribute('aria-label', 'Throw the ' + t.name);
-      b.addEventListener('click', () => {
-        const d = document.createElement('span');
-        d.className = 'tile ' + t.cls; d.innerHTML = t.html; d.setAttribute('aria-hidden', 'true');
-        d.style.setProperty('--r', (Math.random() * 10 - 5).toFixed(1) + 'deg');
-        pond.appendChild(d);
-        b.remove();
-        auntie.textContent = handEl.children.length
-          ? SAYS[t.k]
-          : 'Nothing left in your hand. Come and play a real game.';
-        if (!handEl.children.length) {
-          const again = document.createElement('button');
-          again.type = 'button'; again.className = 'tile ink'; again.textContent = '洗';
-          again.setAttribute('aria-label', 'Shuffle and deal again');
-          again.addEventListener('click', () => { deal(); auntie.textContent = 'Again. Watch your Easts this time.'; });
-          handEl.appendChild(again);
-        }
-      });
-      handEl.appendChild(b);
-    }
-  };
-  deal();
 })();
 </script>
 </body>

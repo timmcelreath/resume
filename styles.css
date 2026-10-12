@@ -115,34 +115,12 @@ a:hover { color: var(--accent); }
 
 .plate { position: relative; overflow: hidden; max-width: 100%; box-shadow: 0 1px 0 var(--rule), 0 24px 40px -26px rgba(0, 0, 0, 0.6); }
 
-/* Criteria: a printed running order in Criteria's own house style */
-.plate-criteria { background: #0b0a09; color: #ece7de; width: min(100%, 30rem); justify-self: center; aspect-ratio: 4 / 5; }
-.bill { height: 100%; display: grid; grid-template-rows: auto auto 1fr auto; gap: 10px; padding: clamp(18px, 6%, 32px); }
-.bill-head { display: flex; justify-content: space-between; gap: 8px; font: 400 0.68rem var(--mono); letter-spacing: 0.14em; text-transform: uppercase; color: #8a847a; border-bottom: 1px solid #2c2a27; padding-bottom: 8px; }
-.bill-title { margin: 4px 0 0; font: 700 clamp(2rem, 6vw, 3rem)/0.9 "Archivo", var(--sans); font-stretch: 62%; text-transform: uppercase; letter-spacing: -0.01em; }
-.running { list-style: none; margin: 0; padding: 0; display: grid; align-content: center; gap: 0.35em; }
-.running li { display: grid; grid-template-columns: 2em minmax(0, 1fr) auto; gap: 0.6em; align-items: baseline; }
-.running span, .running i { font: 400 0.72rem var(--mono); color: #8a847a; font-style: normal; font-variant-numeric: tabular-nums; }
-.running b { font: 400 clamp(0.95rem, 2.2vw, 1.15rem)/1.25 "Source Serif 4", Georgia, serif; }
-.running .gone b { text-decoration: line-through; text-decoration-thickness: 1px; color: #8a847a; }
-.survival { display: flex; align-items: center; gap: 10px; font: 400 0.68rem var(--mono); letter-spacing: 0.1em; text-transform: uppercase; color: #aaa49a; border-top: 1px solid #2c2a27; padding-top: 10px; }
-.meter { flex: 0 0 72px; height: 4px; background: #2c2a27; }
-.meter i { display: block; height: 100%; background: #ece7de; }
-
-/* Kinopolis: Academy-ratio intertitles that change like reels */
-.plate-kino { background: #0c0b0a; color: #efe9dc; aspect-ratio: 1.375; display: grid; place-items: center; font-family: "IM Fell English", Georgia, serif; }
-.plate-kino .frame { position: absolute; inset: 7%; border: 1px solid #8b8070; outline: 1px solid #5a5248; outline-offset: 5px; }
-.plate-kino .cards { display: grid; width: 100%; }
-.plate-kino .card { grid-area: 1 / 1; text-align: center; padding: 0 16%; display: grid; gap: 0.6em; opacity: 0; transition: opacity 0.9s ease; }
-.plate-kino .card.is-on { opacity: 1; }
-.plate-kino small { font-family: "IM Fell English SC", Georgia, serif; letter-spacing: 0.32em; text-transform: uppercase; font-size: clamp(0.72rem, 1.6vw, 0.9rem); color: #b8ab94; }
-.plate-kino em { font-size: clamp(1.15rem, 3vw, 1.85rem); line-height: 1.25; }
-.plate-kino .leader { position: absolute; right: 10%; bottom: 10%; width: 14px; height: 14px; border: 1px solid #8b8070; border-radius: 50%; }
-.plate-kino .leader::after { content: ""; position: absolute; inset: 2px; border-radius: 50%; background: conic-gradient(#8b8070 var(--sweep, 0deg), transparent 0); }
-@media (prefers-reduced-motion: no-preference) {
-  .plate-kino .cards { animation: weave 0.24s steps(2) infinite; }
-}
-@keyframes weave { 50% { transform: translate(0.4px, -0.6px); } }
+/* Screenshots, mounted like prints: a card mat with a caption beneath */
+.plate-shot { margin: 0; background: var(--card); padding: clamp(10px, 2.2%, 18px); padding-bottom: 0; border: 1px solid var(--rule); }
+.plate-shot a { display: block; }
+.plate-shot img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 10; object-fit: cover; object-position: top; transition: filter 0.25s ease; }
+.plate-shot a:hover img { filter: brightness(1.06); }
+.plate-shot figcaption { font: 400 0.75rem var(--mono); color: var(--muted); padding-block: 8px 10px; }
 
 /* Colossal Cave: a working terminal behind a CRT bezel */
 .plate-cave { background: #1b1d1a; padding: clamp(12px, 3%, 22px); border-radius: 10px; }
@@ -165,31 +143,6 @@ a:hover { color: var(--accent); }
 .prompt input::placeholder { color: #1e7a1e; }
 .prompt:focus-within { box-shadow: inset 0 -1px 0 #1e7a1e; }
 
-/* Old Lady Mahjong: a playable corner of the table */
-.plate-mahjong { background: #6e1c18; aspect-ratio: 1; width: min(100%, 34rem); justify-self: center; padding: 6%; }
-.plate-mahjong .felt {
-  height: 100%; display: grid; grid-template-rows: 1fr auto auto; gap: 12px; padding: 6%;
-  background: radial-gradient(ellipse at 50% 40%, #2b6b4b, #174431 75%);
-  box-shadow: inset 0 0 0 2px #4a1210, inset 0 0 40px rgba(0, 0, 0, 0.35);
-}
-.pond { display: flex; flex-wrap: wrap; align-content: center; justify-content: center; gap: 4px; }
-.pond .tile { width: clamp(22px, 5vw, 32px); font-size: clamp(0.8rem, 2.2vw, 1.1rem); cursor: default; transform: rotate(var(--r, 0deg)); }
-.auntie { margin: 0; min-height: 2.6em; text-align: center; font: italic 400 clamp(0.85rem, 2vw, 1rem)/1.3 "IM Fell English", Georgia, serif; color: #f1e6c8; }
-.hand { display: flex; justify-content: center; gap: clamp(3px, 0.9vw, 6px); }
-.tile {
-  appearance: none; border: 0; padding: 0; cursor: pointer;
-  width: clamp(30px, 7vw, 46px); aspect-ratio: 3 / 4; border-radius: 4px;
-  background: linear-gradient(#fbf7ec, #ece4cf); box-shadow: 0 3px 0 #c9b98f, 0 6px 10px rgba(0, 0, 0, 0.35);
-  display: grid; place-items: center;
-  font: 700 clamp(1rem, 3vw, 1.6rem)/1 "Noto Serif TC", "Songti SC", "PMingLiU", serif;
-  transition: transform 0.15s ease;
-}
-.hand .tile:hover, .hand .tile:focus-visible { transform: translateY(-6px); }
-.tile.red { color: #b3221b; } .tile.green { color: #1f6b3a; } .tile.blue { color: #1d3c78; } .tile.ink { color: #1f2328; }
-.tile.white::before { content: ""; width: 58%; height: 66%; border: 2px solid #1d3c78; border-radius: 2px; }
-.tile .num { display: grid; line-height: 0.95; font-size: 0.8em; }
-.tile .num small { font-size: 0.75em; color: #b3221b; }
-@media (prefers-reduced-motion: reduce) { .hand .tile:hover, .hand .tile:focus-visible { transform: none; } .plate-kino .card { transition: none; } }
 
 /* About strip */
 .about { margin-top: 64px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.6fr); gap: 24px 48px; }
